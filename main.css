@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+.navbar {
+  transition: all 0.4s;
+}
+.test {
+  background-color: #ffe694de;
+}
+.test2 {
+  background-color: #fac108;
+}
+.test .navbar-collapse {
+  background-color: transparent;
+}
+#heroSection {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 30px 10px rgba(0, 0, 0, 0.486);
+}
+#gridContainer {
+  background-image: url("imgs/protruding-squares.svg");
+  background-attachment: fixed;
+}
+#gridContainer .card {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 10px 5px 0px rgba(0, 0, 0, 0.486);
+}
+#heroCaption::after {
+  content: "|";
+  animation: flash 0.7s infinite;
+}
+.animatedCounterParent {
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+}
+@keyframes flash {
+  from {
+    color: transparent;
+  }
+  to {
+    color: black;
+  }
+}
+@media screen and (max-width: 500px) {
+  .navbar .navbar-collapse {
+    background-color: #fac108;
+  }
+  .test .navbar-collapse {
+    background-color: transparent;
+  }
+}
